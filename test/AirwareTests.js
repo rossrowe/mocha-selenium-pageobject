@@ -49,7 +49,8 @@ test.describe('Airware tests', function() {
                 console.log('LOG : Updating Sauce');
                 var passed = (currentTest.state === 'passed') ? true : false;
                 var saucelabs = SauceLabsBuilder.build();
-                saucelabs.updateJob(sessionId, { name: currentTest.title, passed: passed }, done);
+                saucelabs.updateJob(sessionId, { name: currentTest.title, passed: passed }, done);  
+				console.log('SauceOnDemandSessionID='+ sessionId);  
                 console.log('LOG : Finished with Sauce');
             } else {
                 done();
